@@ -41,7 +41,7 @@
         {{ $slot }}
     </main>
 
-    <!-- FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT) -->
+    <!-- FLOATING WHATSAPP BUTTON (BOTTOM-LEFT) -->
     <x-whatsapp-float />
 
     <!-- AGENCY FOOTER -->
