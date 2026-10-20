@@ -1,0 +1,69 @@
+<?php
+
+namespace Tests\Feature;
+
+use Tests\TestCase;
+
+class AgencyPagesTest extends TestCase
+{
+    public function test_home_page_can_be_rendered(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('Jasa');
+        $response->assertSee('logo.png');
+        $response->assertSee('Beranda');
+        $response->assertSee('Alur Kerja');
+        $response->assertDontSee('NEW');
+    }
+
+    public function test_tentang_page_can_be_rendered(): void
+    {
+        $response = $this->get('/tentang');
+
+        $response->assertStatus(200);
+        $response->assertSee('Beranda');
+        $response->assertSee('Tentang');
+    }
+
+    public function test_portofolio_page_can_be_rendered(): void
+    {
+        $response = $this->get('/portofolio');
+
+        $response->assertStatus(200);
+        $response->assertSee('Beranda');
+        $response->assertSee('Portofolio');
+        $response->assertSee('Karya Unggulan');
+    }
+
+    public function test_harga_page_can_be_rendered(): void
+    {
+        $response = $this->get('/harga');
+
+        $response->assertStatus(200);
+        $response->assertSee('Beranda');
+        $response->assertSee('Harga');
+        $response->assertSee('Investasi Terencana');
+    }
+
+    public function test_alur_kerja_page_can_be_rendered(): void
+    {
+        $response = $this->get('/alur-kerja');
+
+        $response->assertStatus(200);
+        $response->assertSee('Beranda');
+        $response->assertSee('Alur Kerja');
+        $response->assertSee('Discovery');
+    }
+
+    public function test_layanan_page_can_be_rendered(): void
+    {
+        $response = $this->get('/layanan');
+
+        $response->assertStatus(200);
+        $response->assertSee('Beranda');
+        $response->assertSee('Layanan');
+        $response->assertSee('Layanan Rekayasa Digital');
+    }
+}
