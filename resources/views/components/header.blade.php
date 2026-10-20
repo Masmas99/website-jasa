@@ -8,6 +8,7 @@
     $isPortofolio = request()->routeIs('portofolio') || request()->is('portofolio*');
     $isHarga = request()->routeIs('harga') || request()->is('harga*');
     $isAlurKerja = request()->routeIs('alur-kerja') || request()->is('alur-kerja*');
+    $isFaq = request()->routeIs('faq') || request()->is('faq*');
     $isLayanan = request()->routeIs('layanan') || request()->is('layanan*');
 @endphp
 
@@ -30,50 +31,56 @@
         </a>
 
         <!-- 2. MENU LINK UTAMA (DESKTOP - SATU BARIS RAPI) -->
-        <nav class="hidden lg:flex items-center gap-1 xl:gap-1.5 flex-shrink-0">
+        <nav class="hidden lg:flex items-center gap-0.5 xl:gap-1.5 flex-shrink-0">
             <!-- Beranda -->
             <a href="{{ route('home') }}"
-                class="px-3.5 py-2 text-xs sm:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isHome ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isHome ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Beranda
             </a>
 
             <!-- Tentang (di kanan Beranda) -->
             <a href="{{ route('tentang') }}"
-                class="px-3.5 py-2 text-xs sm:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isTentang ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isTentang ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Tentang
             </a>
 
             <!-- Portofolio -->
             <a href="{{ route('portofolio') }}"
-                class="px-3.5 py-2 text-xs sm:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isPortofolio ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isPortofolio ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Portofolio
             </a>
 
             <!-- Harga -->
             <a href="{{ route('harga') }}"
-                class="px-3.5 py-2 text-xs sm:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isHarga ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isHarga ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Harga
             </a>
 
             <!-- Alur Kerja -->
             <a href="{{ route('alur-kerja') }}"
-                class="px-3.5 py-2 text-xs sm:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isAlurKerja ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isAlurKerja ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Alur Kerja
+            </a>
+
+            <!-- FAQ -->
+            <a href="{{ route('faq') }}"
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isFaq ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                FAQ
             </a>
 
             <!-- Layanan (di paling kanan) -->
             <a href="{{ route('layanan') }}"
-                class="px-3.5 py-2 text-xs sm:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isLayanan ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isLayanan ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Layanan
             </a>
         </nav>
 
         <!-- 3. ACTIONS (CTA BUTTON - SATU BARIS) -->
         <div class="hidden lg:flex items-center flex-shrink-0 whitespace-nowrap">
-            <!-- CTA PRIMER (TOMBOL GRADIENT BULAT 'KONSULTASI GRATIS') -->
+            <!-- CTA PRIMER (TOMBOL GRADIENT BULAT 'KONSULTASI') -->
             <a href="{{ url('/#kontak') }}"
-                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all whitespace-nowrap leading-none flex-shrink-0">
-                Konsultasi Gratis
+                class="inline-flex items-center justify-center px-4 xl:px-6 py-2 xl:py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all whitespace-nowrap leading-none flex-shrink-0">
+                Konsultasi
             </a>
         </div>
 
@@ -102,7 +109,7 @@
 
 <!-- Slide-over Drawer Panel -->
 <div id="agencyDrawer"
-    class="fixed inset-y-0 right-0 z-50 w-[300px] sm:w-[340px] bg-white border-l border-neutral-200 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-in-out translate-x-full lg:hidden overflow-y-auto">
+    class="fixed inset-y-0 right-0 z-50 w-[280px] sm:w-[340px] max-w-[85vw] bg-white border-l border-neutral-200 p-6 flex flex-col justify-between shadow-2xl transition-transform duration-300 ease-in-out translate-x-full lg:hidden overflow-y-auto">
     
     <div>
         <!-- Drawer Header with Logo & Close Button -->
@@ -155,6 +162,12 @@
                 Alur Kerja
             </a>
 
+            <!-- FAQ -->
+            <a href="{{ route('faq') }}" onclick="closeAgencyMenu()"
+                class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isFaq ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
+                FAQ
+            </a>
+
             <!-- Layanan -->
             <a href="{{ route('layanan') }}" onclick="closeAgencyMenu()"
                 class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isLayanan ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
@@ -167,7 +180,7 @@
     <div class="pt-6 border-t border-neutral-100">
         <a href="{{ url('/#kontak') }}" onclick="closeAgencyMenu()"
             class="w-full flex items-center justify-center py-3.5 px-6 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 transition-all active:scale-95">
-            Konsultasi Gratis
+            Konsultasi
         </a>
     </div>
 

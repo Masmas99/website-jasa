@@ -41,6 +41,9 @@
         {{ $slot }}
     </main>
 
+    <!-- FLOATING WHATSAPP BUTTON (BOTTOM-RIGHT) -->
+    <x-whatsapp-float />
+
     <!-- AGENCY FOOTER -->
     <x-footer brand-text="jasa" />
 

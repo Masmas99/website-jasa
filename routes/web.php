@@ -9,6 +9,7 @@ Route::view('tentang', 'pages.tentang')->name('tentang');
 Route::view('portofolio', 'pages.portofolio')->name('portofolio');
 Route::view('harga', 'pages.harga')->name('harga');
 Route::view('alur-kerja', 'pages.alur-kerja')->name('alur-kerja');
+Route::view('faq', 'pages.faq')->name('faq');
 Route::view('layanan', 'pages.layanan')->name('layanan');
 
 // Protected Dashboard & Profile

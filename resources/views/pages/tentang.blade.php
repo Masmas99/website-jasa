@@ -5,7 +5,7 @@
 
     <!-- HERO SECTION -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-20 sm:pt-6 sm:pb-24 text-center">
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.12]">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.15] sm:leading-[1.12] break-words">
             Membangun Standar Baru dalam <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Rekayasa Digital</span>.
         </h1>
 
@@ -95,7 +95,7 @@
             <p class="text-neutral-600 text-sm sm:text-base mt-3 max-w-xl mx-auto">Konsultasikan kebutuhan teknis bisnis Anda bersama tim arsitek software kami sekarang.</p>
             <div class="mt-8">
                 <a href="{{ url('/#kontak') }}" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
-                    <span>Mulai Konsultasi Gratis</span>
+                    <span>Konsultasi</span>
                     &rarr;
                 </a>
             </div>

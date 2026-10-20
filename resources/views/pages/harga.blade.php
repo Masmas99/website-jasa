@@ -5,7 +5,7 @@
 
     <!-- HERO SECTION -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 sm:pt-6 sm:pb-20 text-center">
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.12]">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.15] sm:leading-[1.12] break-words">
             Investasi Terencana untuk <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Hasil Maksimal</span>.
         </h1>
 
@@ -16,7 +16,7 @@
 
     <!-- PRICING CARDS -->
     <section class="pb-20 sm:pb-28 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-lg lg:max-w-none mx-auto">
             
             <!-- Tier 1: Starter -->
             <div class="rounded-3xl border border-neutral-200 p-8 flex flex-col justify-between bg-white shadow-xs hover:border-neutral-300 transition-all">
@@ -96,31 +96,6 @@
                 </div>
             </div>
 
-        </div>
-    </section>
-
-    <!-- FAQ SECTION -->
-    <section class="py-20 sm:py-28 bg-neutral-50/60 border-t border-neutral-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Pertanyaan Umum</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 mt-4 tracking-tight">Frequently Asked Questions</h2>
-            </div>
-
-            <div class="space-y-4">
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-xs">
-                    <h3 class="text-base font-bold text-neutral-900">Apakah source code menjadi milik kami?</h3>
-                    <p class="text-neutral-600 text-sm mt-2 leading-relaxed">Ya, 100%. Setelah pelunasan, seluruh hak cipta, repositori Git, dan akses server akan diserahkan sepenuhnya kepada Anda tanpa royalti berulang.</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-xs">
-                    <h3 class="text-base font-bold text-neutral-900">Bagaimana skema pembayaran di Jasa?</h3>
-                    <p class="text-neutral-600 text-sm mt-2 leading-relaxed">Kami menerapkan skema bertahap berbasis milestone yang transparan (misal: 30% DP, 40% setelah approval UI/UX & koding, 30% setelah final QA dan peluncuran).</p>
-                </div>
-                <div class="bg-white p-6 rounded-2xl border border-neutral-200/80 shadow-xs">
-                    <h3 class="text-base font-bold text-neutral-900">Apakah ada garansi jika terdapat kendala/bug?</h3>
-                    <p class="text-neutral-600 text-sm mt-2 leading-relaxed">Tentu saja. Setiap paket dilengkapi masa garansi bug-fixing gratis selama 1 hingga 6 bulan setelah tanggal go-live.</p>
-                </div>
-            </div>
         </div>
     </section>
 

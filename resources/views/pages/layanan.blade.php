@@ -5,7 +5,7 @@
 
     <!-- HERO SECTION -->
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 sm:pt-6 sm:pb-20 text-center">
-        <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.12]">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.15] sm:leading-[1.12] break-words">
             Layanan Rekayasa Digital <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">End-to-End</span>.
         </h1>
 

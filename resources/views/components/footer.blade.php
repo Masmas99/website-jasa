@@ -9,7 +9,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         <!-- 4 NAVIGATION & DETAIL COLUMNS -->
-        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 sm:gap-x-12 text-sm">
+        <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-x-4 sm:gap-x-8 lg:gap-x-12 gap-y-10 sm:gap-y-12 text-sm">
             <!-- Col 1: NAVIGASI -->
             <div>
                 <p class="text-[11px] font-mono uppercase tracking-[0.2em] text-neutral-400 mb-6 font-semibold">
@@ -21,6 +21,7 @@
                     <li><a href="{{ route('portofolio') }}" class="hover:text-blue-600 transition-colors">Portofolio</a></li>
                     <li><a href="{{ route('harga') }}" class="hover:text-blue-600 transition-colors">Harga</a></li>
                     <li><a href="{{ route('alur-kerja') }}" class="hover:text-blue-600 transition-colors">Alur Kerja</a></li>
+                    <li><a href="{{ route('faq') }}" class="hover:text-blue-600 transition-colors">FAQ</a></li>
                     <li><a href="{{ route('layanan') }}" class="hover:text-blue-600 transition-colors">Layanan</a></li>
                 </ul>
             </div>

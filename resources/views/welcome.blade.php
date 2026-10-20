@@ -6,7 +6,7 @@
     <section id="beranda" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 sm:pt-44 sm:pb-28 flex flex-col items-center justify-center text-center">
         
         <!-- Giant Headline -->
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-neutral-950 max-w-4xl leading-[1.1]">
+        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-neutral-950 max-w-4xl leading-[1.15] sm:leading-[1.1] break-words">
             Wujudkan Solusi Digital <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Modern & Terukur</span> Tanpa Batas.
         </h1>
 
@@ -19,7 +19,7 @@
         <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a href="#kontak"
                 class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all">
-                <span>Konsultasi Gratis</span>
+                <span>Konsultasi</span>
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
             </a>
             <a href="{{ route('portofolio') }}"
@@ -204,7 +204,7 @@
             <p class="text-neutral-600 mt-3 text-sm sm:text-base">Transparan tanpa biaya tersembunyi dengan garansi kepuasan penuh.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-lg lg:max-w-none mx-auto">
             <!-- Plan 1 -->
             <div class="rounded-3xl border border-neutral-200 p-8 flex flex-col justify-between bg-white shadow-xs">
                 <div>
@@ -281,12 +281,12 @@
             <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Mulai Sekarang</span>
             <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-950 mt-4 tracking-tight">Siap Meluncurkan Proyek Impian Anda?</h2>
             <p class="text-neutral-600 text-sm sm:text-base max-w-xl mx-auto mt-4 leading-relaxed">
-                Diskusikan kebutuhan proyek Anda bersama tim ahli kami. Kami siap memberikan konsultasi gratis dan rencana eksekusi terbaik.
+                Diskusikan kebutuhan proyek Anda bersama tim ahli kami. Kami siap memberikan konsultasi dan rencana eksekusi terbaik.
             </p>
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
                 <a href="mailto:hello@studiojasa.com"
                     class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
-                    <span>Mulai Konsultasi Gratis</span>
+                    <span>Konsultasi</span>
                     &rarr;
                 </a>
             </div>
