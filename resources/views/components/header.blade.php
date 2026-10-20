@@ -63,7 +63,7 @@
             </a>
 
             <!-- FAQ -->
-            <a href="{{ route('faq') }}"
+            <a href="{{ Route::has('faq') ? route('faq') : url('/faq') }}"
                 class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isFaq ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 FAQ
             </a>
@@ -163,7 +163,7 @@
             </a>
 
             <!-- FAQ -->
-            <a href="{{ route('faq') }}" onclick="closeAgencyMenu()"
+            <a href="{{ Route::has('faq') ? route('faq') : url('/faq') }}" onclick="closeAgencyMenu()"
                 class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isFaq ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
                 FAQ
             </a>
