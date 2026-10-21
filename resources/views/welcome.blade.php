@@ -2,63 +2,90 @@
 
     <!-- ======================================================== -->
     <!-- 1. HERO SECTION (#beranda)                               -->
+    <!-- Mobile: Badge -> Headline -> Hero Image -> Subheadline -> CTA -->
+    <!-- Desktop: 2-Kolom (Kiri: Teks Lengkap, Kanan: Hero Image)  -->
     <!-- ======================================================== -->
-    <section id="beranda" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-36 pb-20 sm:pt-44 sm:pb-28 flex flex-col items-center justify-center text-center">
-        
-        <!-- Giant Headline -->
-        <h1 class="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-neutral-950 max-w-4xl leading-[1.15] sm:leading-[1.1] break-words">
-            Wujudkan Solusi Digital <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Modern & Terukur</span> Tanpa Batas.
-        </h1>
+    <section id="beranda" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 sm:pt-20 sm:pb-12 lg:pt-24 lg:pb-14">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-6 sm:gap-y-8 lg:gap-y-0 lg:gap-x-14 xl:gap-x-16 items-center">
 
-        <!-- Sub-headline -->
-        <p class="text-base sm:text-lg text-neutral-600 max-w-2xl mt-6 leading-relaxed">
-            Jasa merancang dan membangun ekosistem website, sistem informasi, dan aplikasi mobile berkinerja tinggi dengan estetika modern, cepat, dan terpercaya.
-        </p>
+            <!-- WRAPPER KONTEN TEKS: contents di mobile (agar hero bisa diapit di tengah), flex di desktop -->
+            <div class="contents lg:flex lg:flex-col lg:items-start lg:text-left">
 
-        <!-- Action CTA Buttons -->
-        <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <a href="#kontak"
-                class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all">
-                <span>Konsultasi</span>
-                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-            </a>
-            <a href="{{ route('portofolio') }}"
-                class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200/90 hover:border-neutral-300 font-bold text-xs uppercase tracking-wider transition-all shadow-xs active:scale-95">
-                <span>Lihat Portofolio</span>
-            </a>
+                <!-- 1. BADGE & HEADLINE (Urutan 1 di Mobile & Posisi Atas Kolom Kiri di Desktop) -->
+                <div class="order-1 flex flex-col items-start text-left">
+                    <!-- Tagline Badge -->
+                    <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-100/70 mb-3.5 sm:mb-4">
+                        Solusi Software & Web Modern
+                    </span>
+
+                    <!-- Giant Headline (WARNA HITAM - DIPERKECIL SEDIKIT) -->
+                    <h1 class="text-2xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight text-neutral-950 leading-[1.2] break-words">
+                        Jasa pembuatan website kustom & aplikasi bisnis.
+                    </h1>
+                </div>
+
+                <!-- 3. SUB-HEADLINE & CTA (Urutan 3 di Mobile setelah Hero & Posisi Bawah Kolom Kiri di Desktop) -->
+                <div class="order-3 flex flex-col items-start text-left lg:mt-5">
+                    <!-- Sub-headline (DIPERKECIL SEDIKIT) -->
+                    <p class="text-sm sm:text-base text-neutral-600 leading-relaxed max-w-xl">
+                        Jasa merancang dan membangun ekosistem website, sistem informasi, dan aplikasi mobile berkinerja tinggi dengan arsitektur modern, cepat, dan terpercaya.
+                    </p>
+
+                    <!-- Action CTA Buttons -->
+                    <div class="mt-5 sm:mt-6 lg:mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4">
+                        <a href="#kontak"
+                            class="inline-flex items-center gap-2 px-7 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all">
+                            <span>Konsultasi</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                        </a>
+                        <a href="{{ route('portofolio') }}"
+                            class="inline-flex items-center gap-2 px-7 sm:px-8 py-3.5 rounded-full bg-white hover:bg-neutral-50 text-neutral-800 border border-neutral-200/90 hover:border-neutral-300 font-bold text-xs uppercase tracking-wider transition-all shadow-xs active:scale-95">
+                            <span>Lihat Portofolio</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 2. GAMBAR HERO TRANSPARAN DENGAN ANIMASI (Urutan 2 di Mobile di tengah & Kolom Kanan di Desktop) -->
+            <div class="order-2 lg:order-none relative w-full flex items-center justify-center lg:justify-end py-4 sm:py-6 lg:py-2 select-none pointer-events-none">
+
+                <!-- ANIMASI 1: Pulsing Ambient Gradient Mesh Glow -->
+                <div class="absolute w-64 h-64 sm:w-80 sm:h-80 lg:w-[420px] lg:h-[420px] bg-gradient-to-tr from-blue-500/20 via-indigo-400/20 to-cyan-400/25 rounded-full blur-3xl -z-10 animate-pulse pointer-events-none" style="animation-duration: 4s;"></div>
+
+                <!-- ANIMASI 2: Outer Rotating Dashed Orbital Ring -->
+                <div class="absolute w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] lg:w-[480px] lg:h-[480px] rounded-full border border-blue-400/25 border-dashed -z-10 pointer-events-none animate-spin" style="animation-duration: 35s;"></div>
+
+                <!-- ANIMASI 3: Inner Counter-Rotating Orbit Ring with Satellite Nodes -->
+                <div class="absolute w-[200px] h-[200px] sm:w-[270px] sm:h-[270px] lg:w-[360px] lg:h-[360px] rounded-full border border-indigo-400/30 -z-10 pointer-events-none animate-spin" style="animation-duration: 22s; animation-direction: reverse;">
+                    <!-- Satellite Node 1 -->
+                    <span class="absolute -top-1.5 left-1/2 -translate-x-1/2 w-3 h-3 bg-blue-500 rounded-full shadow-lg shadow-blue-500/60 ring-4 ring-blue-100/60"></span>
+                    <!-- Satellite Node 2 -->
+                    <span class="absolute -bottom-1.5 left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-cyan-400 rounded-full shadow-md shadow-cyan-400/60 ring-2 ring-cyan-100/60"></span>
+                </div>
+
+                <!-- Gambar Hero Transparan Diam (Tanpa Hover Zoom, Tidak Bisa Diklik) -->
+                <img src="{{ asset('hero.png') }}"
+                    alt="Jasa Pembuatan Website Kustom & Aplikasi Bisnis"
+                    class="relative z-10 w-full max-w-[320px] sm:max-w-[420px] lg:max-w-[500px] h-auto object-contain select-none pointer-events-none drop-shadow-2xl"
+                    draggable="false"
+                    loading="eager" />
+            </div>
+
         </div>
-
-        <!-- Social Proof Stats -->
-        <div class="mt-16 sm:mt-20 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 pt-12 border-t border-neutral-200/60 w-full max-w-4xl">
-            <div>
-                <p class="text-3xl sm:text-4xl font-extrabold text-blue-600">50+</p>
-                <p class="text-xs sm:text-sm font-medium text-neutral-500 mt-1">Proyek Selesai</p>
-            </div>
-            <div>
-                <p class="text-3xl sm:text-4xl font-extrabold text-neutral-900">99.8%</p>
-                <p class="text-xs sm:text-sm font-medium text-neutral-500 mt-1">Kepuasan Klien</p>
-            </div>
-            <div>
-                <p class="text-3xl sm:text-4xl font-extrabold text-neutral-900">10x</p>
-                <p class="text-xs sm:text-sm font-medium text-neutral-500 mt-1">Performa Cepat</p>
-            </div>
-            <div>
-                <p class="text-3xl sm:text-4xl font-extrabold text-blue-600">24/7</p>
-                <p class="text-xs sm:text-sm font-medium text-neutral-500 mt-1">Dukungan Teknis</p>
-            </div>
-        </div>
-
     </section>
 
     <!-- ======================================================== -->
     <!-- 2. LAYANAN OVERVIEW SECTION                              -->
     <!-- ======================================================== -->
-    <section class="py-20 sm:py-28 bg-neutral-50/60 border-t border-neutral-100">
+    <section class="pt-10 pb-14 sm:pt-14 sm:pb-18 lg:pt-16 lg:pb-20 bg-neutral-50/60 border-t border-neutral-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <span class="text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Layanan Unggulan</span>
-                <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 mt-4 tracking-tight">Solusi End-to-End untuk Pertumbuhan Bisnis Anda</h2>
-                <p class="text-neutral-600 mt-3 text-sm sm:text-base">Dari konsep awal hingga peluncuran sistem berskala enterprise dengan performa maksimal.</p>
+            <div class="text-center max-w-4xl lg:max-w-5xl mx-auto mb-10 sm:mb-12">
+                <span class="text-xs sm:text-sm font-bold uppercase tracking-[0.25em] text-blue-600 block mb-2 sm:mb-3">Layanan Unggulan</span>
+                <h2 class="text-2xl sm:text-3xl lg:text-4xl xl:text-[2.65rem] font-extrabold text-neutral-900 tracking-tight leading-tight">
+                    Solusi untuk Pertumbuhan Bisnis Anda
+                </h2>
+                <p class="text-neutral-600 mt-3 text-sm sm:text-base max-w-2xl mx-auto">Dari konsep awal hingga peluncuran sistem berskala enterprise dengan performa maksimal.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">

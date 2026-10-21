@@ -13,6 +13,8 @@ class AgencyPagesTest extends TestCase
         $response->assertStatus(200);
         $response->assertSee('Jasa');
         $response->assertSee('logo.png');
+        $response->assertSee('hero.png');
+        $response->assertSee('Jasa pembuatan website kustom & aplikasi bisnis.', false);
         $response->assertSee('Beranda');
         $response->assertSee('Alur Kerja');
         $response->assertDontSee('NEW');
