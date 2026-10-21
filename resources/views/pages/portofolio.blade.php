@@ -4,7 +4,7 @@
     <x-breadcrumb current="Portofolio" />
 
     <!-- HERO SECTION -->
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-16 sm:pt-6 sm:pb-20 text-center">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-14 sm:pt-6 sm:pb-18 text-center">
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-neutral-950 max-w-4xl mx-auto leading-[1.15] sm:leading-[1.12] break-words">
             Karya Unggulan yang <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500">Mendorong Pertumbuhan</span> Nyata.
         </h1>
@@ -14,7 +14,7 @@
         </p>
     </section>
 
-    <!-- PORTFOLIO GRID -->
+    <!-- PORTFOLIO GRID (TAMPILAN SESUAI GAMBAR REFERENSI 1) -->
     <section class="pb-24 sm:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         @php
             $projectList = $projects ?? \App\Http\Controllers\PortfolioController::getProjects();
@@ -22,48 +22,43 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach ($projectList as $slug => $project)
-                <!-- Project Card Link -->
-                <a href="{{ route('portofolio.detail', $slug) }}"
-                    class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between block focus:outline-none focus:ring-2 focus:ring-blue-500/20">
-                    <div>
-                        <!-- Visual Header Gradient -->
-                        <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr {{ $project['gradient'] }} p-6 flex flex-col justify-between text-white shadow-inner relative overflow-hidden">
-                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_60%)] pointer-events-none"></div>
-                            
-                            <span class="relative z-10 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">
+                <!-- Project Card Item -->
+                <div class="group rounded-3xl border border-neutral-200/90 bg-white overflow-hidden shadow-sm hover:shadow-xl hover:border-blue-300 transition-all flex flex-col justify-between">
+                    
+                    <!-- 1. Mockup Image Banner with Dark Gradient Overlay & Text Inside -->
+                    <a href="{{ route('portofolio.detail', $slug) }}" class="relative w-full aspect-[16/10] overflow-hidden bg-neutral-900 block focus:outline-none">
+                        <img src="{{ asset($project['image']) }}"
+                            alt="{{ $project['name'] }}"
+                            class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+
+                        <!-- Dark Gradient Overlay (Meniru Gambar 1) -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-neutral-950/95 via-neutral-950/45 to-transparent flex flex-col justify-end p-6">
+                            <span class="text-xs font-bold uppercase tracking-wider text-blue-500 drop-shadow-xs">
                                 {{ $project['category'] }}
                             </span>
-                            
-                            <div class="relative z-10 flex items-end justify-between">
-                                <h3 class="text-xl font-black group-hover:translate-x-1 transition-transform">
-                                    {{ $project['name'] }}
-                                </h3>
-                                <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0">
-                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-                                </span>
-                            </div>
+                            <h3 class="text-2xl font-black text-white mt-1 tracking-tight drop-shadow-sm">
+                                {{ $project['name'] }}
+                            </h3>
                         </div>
+                    </a>
 
-                        <!-- Content Details -->
-                        <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors leading-snug">
-                            {{ $project['headline'] }}
-                        </h4>
-                        <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">
+                    <!-- 2. Content Body & Action Link (Meniru Gambar 1) -->
+                    <div class="p-6 sm:p-7 flex flex-col justify-between flex-1">
+                        <p class="text-neutral-600 text-sm leading-relaxed line-clamp-3">
                             {{ $project['short_desc'] }}
                         </p>
+
+                        <div class="mt-6 pt-2">
+                            <a href="{{ route('portofolio.detail', $slug) }}"
+                                class="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-700 font-bold text-sm group/btn focus:outline-none">
+                                <span>Buka studi kasus</span>
+                                <span class="group-hover/btn:translate-x-1.5 transition-transform duration-200">&rarr;</span>
+                            </a>
+                        </div>
                     </div>
 
-                    <!-- Bottom Meta & Action -->
-                    <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs">
-                        <span class="font-bold text-blue-600">
-                            {{ $project['metric'] }}
-                        </span>
-                        <span class="inline-flex items-center gap-1 font-bold text-neutral-500 group-hover:text-blue-600 transition-colors">
-                            <span>Lihat Detail</span>
-                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
-                        </span>
-                    </div>
-                </a>
+                </div>
             @endforeach
         </div>
     </section>
@@ -74,7 +69,7 @@
             <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">Punya Ide Proyek Serupa?</h2>
             <p class="text-neutral-600 text-sm sm:text-base mt-3 max-w-xl mx-auto">Mari wujudkan aplikasi dan sistem informasi impian Anda dengan kualitas terbaik.</p>
             <div class="mt-8">
-                <a href="{{ url('/#kontak') }}" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
+                <a href="{{ route('kontak') }}" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
                     <span>Konsultasi Proyek Anda</span>
                     &rarr;
                 </a>

@@ -167,7 +167,7 @@
             <h2 class="text-3xl sm:text-4xl font-extrabold text-neutral-900 tracking-tight">Butuh Solusi Khusus untuk Perusahaan Anda?</h2>
             <p class="text-neutral-600 text-sm sm:text-base mt-3 max-w-xl mx-auto">Diskusikan kebutuhan teknis Anda secara mendalam dengan tim arsitek solusi kami.</p>
             <div class="mt-8">
-                <a href="{{ url('/#kontak') }}" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
+                <a href="{{ route('kontak') }}" class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
                     <span>Jadwalkan Konsultasi Teknis</span>
                     &rarr;
                 </a>

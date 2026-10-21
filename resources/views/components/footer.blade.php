@@ -20,9 +20,9 @@
                     <li><a href="{{ route('tentang') }}" class="hover:text-blue-600 transition-colors">Tentang</a></li>
                     <li><a href="{{ route('portofolio') }}" class="hover:text-blue-600 transition-colors">Portofolio</a></li>
                     <li><a href="{{ route('harga') }}" class="hover:text-blue-600 transition-colors">Harga</a></li>
-                    <li><a href="{{ route('alur-kerja') }}" class="hover:text-blue-600 transition-colors">Alur Kerja</a></li>
                     <li><a href="{{ Route::has('faq') ? route('faq') : url('/faq') }}" class="hover:text-blue-600 transition-colors">FAQ</a></li>
                     <li><a href="{{ route('layanan') }}" class="hover:text-blue-600 transition-colors">Layanan</a></li>
+                    <li><a href="{{ route('kontak') }}" class="hover:text-blue-600 transition-colors">Kontak</a></li>
                 </ul>
             </div>
 

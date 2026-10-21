@@ -7,9 +7,9 @@
     $isTentang = request()->routeIs('tentang') || request()->is('tentang*');
     $isPortofolio = request()->routeIs('portofolio') || request()->is('portofolio*');
     $isHarga = request()->routeIs('harga') || request()->is('harga*');
-    $isAlurKerja = request()->routeIs('alur-kerja') || request()->is('alur-kerja*');
     $isFaq = request()->routeIs('faq') || request()->is('faq*');
     $isLayanan = request()->routeIs('layanan') || request()->is('layanan*');
+    $isKontak = request()->routeIs('kontak') || request()->is('kontak*');
 @endphp
 
 <!-- ======================================================== -->
@@ -56,29 +56,29 @@
                 Harga
             </a>
 
-            <!-- Alur Kerja -->
-            <a href="{{ route('alur-kerja') }}"
-                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isAlurKerja ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
-                Alur Kerja
-            </a>
-
             <!-- FAQ -->
             <a href="{{ Route::has('faq') ? route('faq') : url('/faq') }}"
                 class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isFaq ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 FAQ
             </a>
 
-            <!-- Layanan (di paling kanan) -->
+            <!-- Layanan -->
             <a href="{{ route('layanan') }}"
-                class="px-2.5 xl:px-3.5 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isLayanan ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                class="px-2 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isLayanan ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
                 Layanan
+            </a>
+
+            <!-- Kontak (di paling kanan) -->
+            <a href="{{ route('kontak') }}"
+                class="px-2 xl:px-3 py-1.5 xl:py-2 text-xs xl:text-sm rounded-full transition-all whitespace-nowrap flex-shrink-0 {{ $isKontak ? 'font-bold text-blue-600 bg-blue-50' : 'font-semibold text-neutral-600 hover:text-blue-600' }}">
+                Kontak
             </a>
         </nav>
 
         <!-- 3. ACTIONS (CTA BUTTON - SATU BARIS) -->
         <div class="hidden lg:flex items-center flex-shrink-0 whitespace-nowrap">
             <!-- CTA PRIMER (TOMBOL GRADIENT BULAT 'KONSULTASI') -->
-            <a href="{{ url('/#kontak') }}"
+            <a href="{{ route('kontak') }}"
                 class="inline-flex items-center justify-center px-4 xl:px-6 py-2 xl:py-2.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-md shadow-blue-500/25 hover:shadow-lg hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all whitespace-nowrap leading-none flex-shrink-0">
                 Konsultasi
             </a>
@@ -156,12 +156,6 @@
                 Harga
             </a>
 
-            <!-- Alur Kerja -->
-            <a href="{{ route('alur-kerja') }}" onclick="closeAgencyMenu()"
-                class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isAlurKerja ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
-                Alur Kerja
-            </a>
-
             <!-- FAQ -->
             <a href="{{ Route::has('faq') ? route('faq') : url('/faq') }}" onclick="closeAgencyMenu()"
                 class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isFaq ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
@@ -173,12 +167,18 @@
                 class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isLayanan ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
                 Layanan
             </a>
+
+            <!-- Kontak -->
+            <a href="{{ route('kontak') }}" onclick="closeAgencyMenu()"
+                class="block px-4 py-3 rounded-2xl text-sm transition-colors {{ $isKontak ? 'font-bold bg-blue-50 text-blue-600' : 'font-semibold text-neutral-700 hover:bg-neutral-50' }}">
+                Kontak
+            </a>
         </nav>
     </div>
 
     <!-- Drawer Footer with CTA -->
     <div class="pt-6 border-t border-neutral-100">
-        <a href="{{ url('/#kontak') }}" onclick="closeAgencyMenu()"
+        <a href="{{ route('kontak') }}" onclick="closeAgencyMenu()"
             class="w-full flex items-center justify-center py-3.5 px-6 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 transition-all active:scale-95">
             Konsultasi
         </a>

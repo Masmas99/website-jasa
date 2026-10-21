@@ -10,9 +10,9 @@ Route::view('tentang', 'pages.tentang')->name('tentang');
 Route::get('portofolio', [PortfolioController::class, 'index'])->name('portofolio');
 Route::get('portofolio/{slug}', [PortfolioController::class, 'show'])->name('portofolio.detail');
 Route::view('harga', 'pages.harga')->name('harga');
-Route::view('alur-kerja', 'pages.alur-kerja')->name('alur-kerja');
 Route::view('faq', 'pages.faq')->name('faq');
 Route::view('layanan', 'pages.layanan')->name('layanan');
+Route::view('kontak', 'pages.kontak')->name('kontak');
 
 // Protected Dashboard & Profile
 Route::view('dashboard', 'dashboard')

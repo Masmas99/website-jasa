@@ -87,7 +87,7 @@
                 Tim teknis kami siap memberikan konsultasi gratis dan mendiskusikan kebutuhan arsitektur digital Anda tanpa ikatan.
             </p>
             <div class="mt-6">
-                <a href="{{ url('/#kontak') }}"
+                <a href="{{ route('kontak') }}"
                     class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
                     <span>Hubungi Kami Sekarang</span>
                     &rarr;

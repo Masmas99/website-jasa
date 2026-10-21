@@ -33,7 +33,7 @@
 
                     <!-- Action CTA Buttons -->
                     <div class="mt-5 sm:mt-6 lg:mt-8 flex flex-wrap items-center gap-3.5 sm:gap-4">
-                        <a href="#kontak"
+                        <a href="{{ route('kontak') }}"
                             class="inline-flex items-center gap-2 px-7 sm:px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:scale-105 active:scale-95 transition-all">
                             <span>Konsultasi</span>
                             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
@@ -214,13 +214,6 @@
                     <p class="text-neutral-500 text-xs sm:text-sm mt-2 leading-relaxed">Quality assurance menyeluruh sebelum deployment ke server produksi.</p>
                 </div>
             </div>
-
-            <div class="mt-12 text-center">
-                <a href="{{ route('alur-kerja') }}" class="inline-flex items-center gap-2 text-sm font-bold text-blue-600 hover:text-blue-700">
-                    <span>Pelajari Alur Kerja Lengkap Kami</span>
-                    &rarr;
-                </a>
-            </div>
         </div>
     </section>
 
@@ -304,6 +297,257 @@
     </section>
 
     <!-- ======================================================== -->
+    <!-- 5.5 KEPERCAYAAN MITRA (TESTIMONIAL DUAL MARQUEE LAWAN ARAH) -->
+    <!-- ======================================================== -->
+    @php
+        $testimonialsRow1 = [
+            [
+                'name' => 'Rendra Pratama',
+                'role' => 'CEO & Founder',
+                'company' => 'Lock Jobs',
+                'quote' => 'Platform AI screener kami menangani 50.000 pelamar di bulan pertama tanpa kendala. Arsitektur backend yang dirancang Jasa sangat kokoh, aman, dan responsif.',
+            ],
+            [
+                'name' => 'dr. Melina Kusuma',
+                'role' => 'Direktur Operasional',
+                'company' => 'MedikaCare',
+                'quote' => 'Aplikasi telemedisin dan reservasi klinik terintegrasi mulus dengan rekam medis digital kami. Efisiensi antrean klinik naik lebih dari 60% sejak sistem diluncurkan.',
+            ],
+            [
+                'name' => 'Budi Santoso',
+                'role' => 'Head of Supply Chain',
+                'company' => 'LogiTrack Pro',
+                'quote' => 'Fleet monitoring real-time berbasis IoT dan websockets berjalan presisi. Delivery SLA kami melonjak ke 99.2% berkat dashboard rute pintar buatan tim Jasa.',
+            ],
+            [
+                'name' => 'Siti Rahmawati',
+                'role' => 'Founder & Academic Lead',
+                'company' => 'EduPlex LMS',
+                'quote' => 'Sistem LMS interaktif dengan live video dan scoring otomatis berhasil diadopsi 14 institusi pendidikan. Struktur kodenya rapi dan dokumentasinya sangat komprehensif.',
+            ],
+            [
+                'name' => 'Kevin Gunawan',
+                'role' => 'VP of Engineering',
+                'company' => 'Finova Core',
+                'quote' => 'Integrasi multi-gateway dan enkripsi data transaksi dikerjakan dengan standar PCI-DSS yang ketat. Disiplin sprint dan komunikasi timnya sangat profesional.',
+            ],
+        ];
+
+        $testimonialsRow2 = [
+            [
+                'name' => 'Erik Lindqvist',
+                'role' => 'Managing Director',
+                'company' => 'Nordic Supply B2B',
+                'quote' => 'Portal procurement multi-currency dan automated tax invoicing kami menghemat ratusan jam kerja divisi finance setiap kuartal. Mitra digital yang luar biasa terpercaya.',
+            ],
+            [
+                'name' => 'Dian Paramita',
+                'role' => 'CFO',
+                'company' => 'Apex Asset ERP',
+                'quote' => 'Migrasi aset gudang kami dari ratusan spreadsheet ke ERP kustom berjalan aman tanpa data loss. Rekonsiliasi audit akhir tahun selesai 3 kali lebih cepat.',
+            ],
+            [
+                'name' => 'Arya Wicaksana',
+                'role' => 'Co-Founder',
+                'company' => 'Craftify Commerce',
+                'quote' => 'Waktu loading toko online kami berada di bawah 0.8 detik meskipun memuat puluhan ribu varian produk. Konversi penjualan mobile meningkat drastis.',
+            ],
+            [
+                'name' => 'Nadia Novita',
+                'role' => 'Chief Marketing Officer',
+                'company' => 'UrbanStay Group',
+                'quote' => 'Sistem direct booking hotel yang kami bangun bersama Jasa sukses memangkas biaya komisi platform pihak ketiga hingga 40%. Desain UI/UX-nya sangat disukai tamu.',
+            ],
+            [
+                'name' => 'Farhan Ramadhan',
+                'role' => 'Lead Product Architect',
+                'company' => 'Sinergi Analytics',
+                'quote' => 'Dashboard analitik real-time dengan charting jutaan datapoint berjalan lancar tanpa browser lag. Keahlian performa frontend tim Jasa benar-benar kelas dunia.',
+            ],
+        ];
+    @endphp
+
+    <section class="py-20 sm:py-28 bg-gradient-to-b from-white via-neutral-50/40 to-white border-t border-neutral-100 overflow-hidden relative select-none">
+        <!-- Section Header -->
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-14 sm:mb-16">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-200">
+                Kepercayaan Mitra
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-950 mt-4 tracking-tight">
+                Apa kata mitra kami
+            </h2>
+            <p class="text-neutral-600 text-sm sm:text-base max-w-2xl mx-auto mt-4 leading-relaxed">
+                Pengalaman nyata dari para founder, direktur, dan tim teknis yang mempercayakan pengembangan sistem digital mereka bersama kami.
+            </p>
+        </div>
+
+        <!-- Marquee Wrapper with Side Gradient Fades & Pause on Hover -->
+        <div class="relative w-full overflow-hidden pause-on-hover py-4">
+            <!-- Left & Right Gradient Shadows for Seamless Fade -->
+            <div class="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-36 bg-gradient-to-r from-white via-white/80 to-transparent z-10"></div>
+            <div class="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-36 bg-gradient-to-l from-white via-white/80 to-transparent z-10"></div>
+
+            <!-- BARIS 1: BERGERAK DARI KANAN KE KIRI -->
+            <div class="mb-5 sm:mb-6 overflow-hidden">
+                <div class="animate-marquee-left flex gap-5 sm:gap-6 items-stretch">
+                    @foreach (array_merge($testimonialsRow1, $testimonialsRow1) as $item)
+                        <div class="w-[300px] sm:w-[380px] flex-shrink-0 bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-xs hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+                            <div>
+                                <!-- Rating Stars -->
+                                <div class="flex items-center gap-1">
+                                    @for ($i = 0; $i < 5; $i++)
+                                        <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    @endfor
+                                </div>
+
+                                <!-- Testimonial Quote -->
+                                <p class="text-xs sm:text-sm text-neutral-700 mt-4 leading-relaxed font-normal">
+                                    &ldquo;{{ $item['quote'] }}&rdquo;
+                                </p>
+                            </div>
+
+                            <!-- Author Profile -->
+                            <div class="mt-6 pt-5 border-t border-neutral-100 flex items-center gap-3">
+                                <img src="{{ asset('images/profile-icon.png') }}"
+                                    alt="{{ $item['name'] }}"
+                                    class="w-10 h-10 object-contain flex-shrink-0" />
+                                <div class="min-w-0">
+                                    <p class="text-sm font-bold text-neutral-950 truncate">
+                                        {{ $item['name'] }}
+                                    </p>
+                                    <p class="text-xs text-neutral-500 font-medium truncate">
+                                        {{ $item['role'] }} &bull; <span class="text-neutral-700 font-semibold">{{ $item['company'] }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+            <!-- BARIS 2: BERGERAK DARI KIRI KE KANAN (LAWAN ARAH) -->
+            <div class="overflow-hidden">
+                <div class="animate-marquee-right flex gap-5 sm:gap-6 items-stretch">
+                    @foreach (array_merge($testimonialsRow2, $testimonialsRow2) as $item)
+                        <div class="w-[300px] sm:w-[380px] flex-shrink-0 bg-white rounded-3xl p-6 sm:p-7 border border-neutral-200/90 shadow-xs hover:border-blue-300 hover:shadow-md transition-all flex flex-col justify-between">
+                            <div>
+                                <!-- Rating Stars -->
+                                <div class="flex items-center gap-1">
+                                    @for ($i = 0; $i < 5; $i++)
+                                        <svg class="w-4 h-4 text-amber-400 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                    @endfor
+                                </div>
+
+                                <!-- Testimonial Quote -->
+                                <p class="text-xs sm:text-sm text-neutral-700 mt-4 leading-relaxed font-normal">
+                                    &ldquo;{{ $item['quote'] }}&rdquo;
+                                </p>
+                            </div>
+
+                            <!-- Author Profile -->
+                            <div class="mt-6 pt-5 border-t border-neutral-100 flex items-center gap-3">
+                                <img src="{{ asset('images/profile-icon.png') }}"
+                                    alt="{{ $item['name'] }}"
+                                    class="w-10 h-10 object-contain flex-shrink-0" />
+                                <div class="min-w-0">
+                                    <p class="text-sm font-bold text-neutral-950 truncate">
+                                        {{ $item['name'] }}
+                                    </p>
+                                    <p class="text-xs text-neutral-500 font-medium truncate">
+                                        {{ $item['role'] }} &bull; <span class="text-neutral-700 font-semibold">{{ $item['company'] }}</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
+    <!-- 5.8 PUSAT BANTUAN (PERTANYAAN SEPUTAR LAYANAN)           -->
+    <!-- ======================================================== -->
+    @php
+        $faqs = [
+            [
+                'question' => 'Berapa lama estimasi waktu pembuatan website atau aplikasi bisnis?',
+                'answer' => 'Durasi pengerjaan bervariasi bergantung pada skala kompleksitas sistem. Website profil standar selesai dalam waktu 1-2 minggu, sedangkan sistem informasi terintegrasi, platform SaaS, atau aplikasi kustom umumnya membutuhkan waktu 4-8 minggu dengan jadwal sprint terperinci.',
+                'open' => true,
+            ],
+            [
+                'question' => 'Apakah seluruh hak cipta dan source code menjadi milik kami?',
+                'answer' => 'Ya, 100%. Setelah seluruh kewajiban pembayaran selesai, seluruh hak cipta, repositori Git, dokumentasi arsitektur, dan akses server akan diserahkan sepenuhnya kepada Anda tanpa biaya royalti atau langganan tersembunyi.',
+                'open' => false,
+            ],
+            [
+                'question' => 'Bagaimana skema termin pembayaran proyek di Jasa?',
+                'answer' => 'Kami menerapkan skema pembayaran bertahap berbasis milestone yang transparan dan aman: 30% Down Payment (DP) saat kick-off, 40% setelah approval prototipe desain UI/UX & fungsi utama di server staging preview, serta 30% pelunasan setelah QA testing tuntas dan sistem siap go-live.',
+                'open' => false,
+            ],
+            [
+                'question' => 'Apakah ada garansi jika terdapat kendala teknis atau bug setelah rilis?',
+                'answer' => 'Tentu saja. Setiap paket pengembangan di Jasa dilengkapi garansi perbaikan bug gratis selama 1 hingga 6 bulan terhitung sejak tanggal peluncuran (go-live), memastikan sistem berjalan stabil di server produksi Anda.',
+                'open' => false,
+            ],
+            [
+                'question' => 'Teknologi dan arsitektur apa yang digunakan dalam pengembangan?',
+                'answer' => 'Kami menggunakan stack modern berkinerja tinggi, aman, dan mudah diskalakan seperti Laravel, Livewire, Vue.js, React, Tailwind CSS, PostgreSQL/MySQL, arsitektur RESTful API, hingga integrasi cloud dan model AI cerdas sesuai kebutuhan bisnis Anda.',
+                'open' => false,
+            ],
+            [
+                'question' => 'Apakah kami bisa memantau progres pengerjaan sistem secara berkala?',
+                'answer' => 'Sangat bisa. Kami menyediakan URL staging khusus yang selalu diperbarui setiap sprint mingguan. Anda dapat menguji fitur secara langsung dan memberikan masukan sebelum sistem diluncurkan ke publik.',
+                'open' => false,
+            ],
+        ];
+    @endphp
+
+    <section class="py-20 sm:py-28 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-neutral-100">
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider text-blue-600 bg-blue-50 border border-blue-200">
+                Pusat Bantuan
+            </span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold text-neutral-950 mt-4 tracking-tight">
+                Pertanyaan Seputar Layanan
+            </h2>
+            <p class="text-neutral-600 text-sm sm:text-base mt-4 leading-relaxed">
+                Informasi penting dan jawaban lengkap mengenai proses jasa pembuatan website dan aplikasi kami.
+            </p>
+        </div>
+
+        <!-- FAQ Accordion List -->
+        <div class="space-y-4">
+            @foreach ($faqs as $faq)
+                <details class="group rounded-3xl bg-white border border-neutral-200/90 p-6 sm:p-7 shadow-xs hover:border-blue-300 transition-all [&_summary::-webkit-details-marker]:hidden" {{ $faq['open'] ? 'open' : '' }}>
+                    <summary class="flex items-center justify-between gap-4 cursor-pointer list-none select-none">
+                        <h3 class="text-base sm:text-lg font-bold text-neutral-900 group-open:text-blue-600 transition-colors">
+                            {{ $faq['question'] }}
+                        </h3>
+                        <span class="w-8 h-8 rounded-full bg-neutral-100 text-neutral-500 group-hover:bg-blue-50 group-hover:text-blue-600 group-open:rotate-180 group-open:bg-blue-600 group-open:text-white transition-all flex items-center justify-center flex-shrink-0">
+                            <svg class="w-4 h-4 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M19 9l-7 7-7-7"/></svg>
+                        </span>
+                    </summary>
+                    <p class="mt-4 text-neutral-600 text-sm sm:text-base leading-relaxed border-t border-neutral-100 pt-4">
+                        {{ $faq['answer'] }}
+                    </p>
+                </details>
+            @endforeach
+        </div>
+
+        <!-- Link ke FAQ Lengkap -->
+        <div class="mt-10 text-center">
+            <a href="{{ route('faq') }}"
+                class="inline-flex items-center gap-2 px-7 py-3 rounded-full border border-neutral-200 hover:border-blue-300 hover:bg-blue-50/50 text-xs font-bold uppercase tracking-wider text-neutral-800 hover:text-blue-600 transition-all shadow-xs">
+                <span>Lihat Semua FAQ Lengkap</span>
+                &rarr;
+            </a>
+        </div>
+    </section>
+
+    <!-- ======================================================== -->
     <!-- 6. KONTAK SECTION                                        -->
     <!-- ======================================================== -->
     <section id="kontak" class="py-20 sm:py-28 bg-gradient-to-b from-neutral-50/60 to-white border-t border-neutral-100">
@@ -314,7 +558,7 @@
                 Diskusikan kebutuhan proyek Anda bersama tim ahli kami. Kami siap memberikan konsultasi dan rencana eksekusi terbaik.
             </p>
             <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
-                <a href="mailto:hello@studiojasa.com"
+                <a href="{{ route('kontak') }}"
                     class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-bold text-xs uppercase tracking-wider shadow-lg shadow-blue-500/25 hover:scale-105 active:scale-95 transition-all">
                     <span>Konsultasi</span>
                     &rarr;

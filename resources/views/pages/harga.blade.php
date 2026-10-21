@@ -37,7 +37,7 @@
                     </ul>
                 </div>
                 <div class="mt-8 pt-6 border-t border-neutral-100">
-                    <a href="{{ url('/#kontak') }}" class="block text-center py-3.5 px-4 rounded-full border border-neutral-200 hover:border-neutral-400 font-bold text-xs uppercase tracking-wider text-neutral-800 transition-all active:scale-95">
+                    <a href="{{ route('kontak') }}" class="block text-center py-3.5 px-4 rounded-full border border-neutral-200 hover:border-neutral-400 font-bold text-xs uppercase tracking-wider text-neutral-800 transition-all active:scale-95">
                         Pilih Paket Starter
                     </a>
                 </div>
@@ -65,7 +65,7 @@
                     </ul>
                 </div>
                 <div class="mt-8 pt-6 border-t border-blue-100">
-                    <a href="{{ url('/#kontak') }}" class="block text-center py-3.5 px-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-bold text-xs uppercase tracking-wider text-white shadow-md shadow-blue-500/25 transition-all active:scale-95">
+                    <a href="{{ route('kontak') }}" class="block text-center py-3.5 px-4 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 font-bold text-xs uppercase tracking-wider text-white shadow-md shadow-blue-500/25 transition-all active:scale-95">
                         Pilih Paket Professional
                     </a>
                 </div>
@@ -90,7 +90,7 @@
                     </ul>
                 </div>
                 <div class="mt-8 pt-6 border-t border-neutral-100">
-                    <a href="{{ url('/#kontak') }}" class="block text-center py-3.5 px-4 rounded-full border border-neutral-200 hover:border-neutral-400 font-bold text-xs uppercase tracking-wider text-neutral-800 transition-all active:scale-95">
+                    <a href="{{ route('kontak') }}" class="block text-center py-3.5 px-4 rounded-full border border-neutral-200 hover:border-neutral-400 font-bold text-xs uppercase tracking-wider text-neutral-800 transition-all active:scale-95">
                         Konsultasi Kustom
                     </a>
                 </div>
