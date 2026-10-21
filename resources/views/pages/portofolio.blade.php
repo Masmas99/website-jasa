@@ -10,110 +10,61 @@
         </h1>
 
         <p class="text-base sm:text-lg text-neutral-600 max-w-2xl mx-auto mt-6 leading-relaxed">
-            Jelajahi berbagai sistem informasi berskala besar, platform SaaS, dan aplikasi mobile yang telah berhasil kami bangun untuk klien kami.
+            Jelajahi berbagai sistem informasi berskala besar, platform SaaS, dan aplikasi mobile yang telah berhasil kami bangun untuk klien kami. Klik salah satu proyek untuk membaca detail studi kasus lengkap.
         </p>
     </section>
 
     <!-- PORTFOLIO GRID -->
     <section class="pb-24 sm:pb-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        @php
+            $projectList = $projects ?? \App\Http\Controllers\PortfolioController::getProjects();
+        @endphp
+
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            
-            <!-- Project 1 -->
-            <div class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-600 p-6 flex flex-col justify-between text-white shadow-inner">
-                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">FinTech SaaS</span>
-                        <h3 class="text-xl font-black">Jasa Analytics</h3>
-                    </div>
-                    <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors">Platform Keuangan Multi-Tenancy</h4>
-                    <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">Dashboard analitik keuangan real-time dengan pengolahan jutaan transaksi harian tanpa latensi.</p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
-                    <span class="font-medium text-blue-600">+240% Efisiensi Operasional</span>
-                    <span>Laravel &bull; Vue</span>
-                </div>
-            </div>
+            @foreach ($projectList as $slug => $project)
+                <!-- Project Card Link -->
+                <a href="{{ route('portofolio.detail', $slug) }}"
+                    class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between block focus:outline-none focus:ring-2 focus:ring-blue-500/20">
+                    <div>
+                        <!-- Visual Header Gradient -->
+                        <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr {{ $project['gradient'] }} p-6 flex flex-col justify-between text-white shadow-inner relative overflow-hidden">
+                            <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.22),transparent_60%)] pointer-events-none"></div>
+                            
+                            <span class="relative z-10 bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">
+                                {{ $project['category'] }}
+                            </span>
+                            
+                            <div class="relative z-10 flex items-end justify-between">
+                                <h3 class="text-xl font-black group-hover:translate-x-1 transition-transform">
+                                    {{ $project['name'] }}
+                                </h3>
+                                <span class="w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white opacity-0 group-hover:opacity-100 transition-all transform translate-x-2 group-hover:translate-x-0">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                                </span>
+                            </div>
+                        </div>
 
-            <!-- Project 2 -->
-            <div class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-cyan-500 to-blue-600 p-6 flex flex-col justify-between text-white shadow-inner">
-                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">E-Commerce</span>
-                        <h3 class="text-xl font-black">Nordic Supply</h3>
+                        <!-- Content Details -->
+                        <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors leading-snug">
+                            {{ $project['headline'] }}
+                        </h4>
+                        <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">
+                            {{ $project['short_desc'] }}
+                        </p>
                     </div>
-                    <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors">Toko Ekspor Skala Global</h4>
-                    <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">Platform e-commerce headless dengan integrasi multi-mata uang dan payment gateway otomatis.</p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
-                    <span class="font-medium text-blue-600">0.4s Rata-rata Loading</span>
-                    <span>Livewire &bull; Tailwind</span>
-                </div>
-            </div>
 
-            <!-- Project 3 -->
-            <div class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-indigo-600 to-blue-800 p-6 flex flex-col justify-between text-white shadow-inner">
-                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">EdTech</span>
-                        <h3 class="text-xl font-black">EduPlex LMS</h3>
+                    <!-- Bottom Meta & Action -->
+                    <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs">
+                        <span class="font-bold text-blue-600">
+                            {{ $project['metric'] }}
+                        </span>
+                        <span class="inline-flex items-center gap-1 font-bold text-neutral-500 group-hover:text-blue-600 transition-colors">
+                            <span>Lihat Detail</span>
+                            <span class="group-hover:translate-x-1 transition-transform">&rarr;</span>
+                        </span>
                     </div>
-                    <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors">Learning Management System</h4>
-                    <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">Platform manajemen pembelajaran daring dengan streaming video adaptif dan kuis interaktif.</p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
-                    <span class="font-medium text-blue-600">50K+ Mahasiswa Aktif</span>
-                    <span>Laravel &bull; MySQL</span>
-                </div>
-            </div>
-
-            <!-- Project 4 -->
-            <div class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-blue-500 to-teal-500 p-6 flex flex-col justify-between text-white shadow-inner">
-                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">HealthTech</span>
-                        <h3 class="text-xl font-black">MedikaCare</h3>
-                    </div>
-                    <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors">Aplikasi Telehealth & Rekam Medis</h4>
-                    <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">Aplikasi mobile iOS & Android untuk konsultasi dokter online dan reservasi klinik terpadu.</p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
-                    <span class="font-medium text-blue-600">Rating 4.9 di App Store</span>
-                    <span>Flutter &bull; API</span>
-                </div>
-            </div>
-
-            <!-- Project 5 -->
-            <div class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-sky-500 to-indigo-600 p-6 flex flex-col justify-between text-white shadow-inner">
-                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">Logistics</span>
-                        <h3 class="text-xl font-black">LogiTrack Pro</h3>
-                    </div>
-                    <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors">Fleet & Supply Chain System</h4>
-                    <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">Tracking armada truk berbasis IoT dan GPS dengan algoritma rute tercepat berbasis AI.</p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
-                    <span class="font-medium text-blue-600">-30% Biaya Bahan Bakar</span>
-                    <span>Node.js &bull; Laravel</span>
-                </div>
-            </div>
-
-            <!-- Project 6 -->
-            <div class="group rounded-3xl border border-neutral-200/90 bg-white p-6 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all flex flex-col justify-between">
-                <div>
-                    <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-indigo-700 to-blue-500 p-6 flex flex-col justify-between text-white shadow-inner">
-                        <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold self-start">Enterprise</span>
-                        <h3 class="text-xl font-black">Apex Asset ERP</h3>
-                    </div>
-                    <h4 class="text-lg font-bold text-neutral-900 mt-5 group-hover:text-blue-600 transition-colors">Sistem Manajemen Aset Korporasi</h4>
-                    <p class="text-xs sm:text-sm text-neutral-600 mt-2 leading-relaxed">Solusi ERP kustom untuk inventarisasi dan penyusutan aset bernilai miliaran rupiah.</p>
-                </div>
-                <div class="mt-6 pt-4 border-t border-neutral-100 flex items-center justify-between text-xs text-neutral-500">
-                    <span class="font-medium text-blue-600">Audit ISO 27001 Lolos</span>
-                    <span>PostgreSQL &bull; Docker</span>
-                </div>
-            </div>
-
+                </a>
+            @endforeach
         </div>
     </section>
 

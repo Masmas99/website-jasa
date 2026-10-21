@@ -41,6 +41,29 @@ class AgencyPagesTest extends TestCase
         $response->assertSee('Beranda');
         $response->assertSee('Portofolio');
         $response->assertSee('Karya Unggulan');
+        $response->assertSee('Jasa Analytics');
+        $response->assertSee('Nordic Supply');
+        $response->assertSee('Lihat Detail');
+    }
+
+    public function test_portofolio_detail_page_can_be_rendered(): void
+    {
+        $response = $this->get('/portofolio/jasa-analytics');
+
+        $response->assertStatus(200);
+        $response->assertSee('Jasa Analytics');
+        $response->assertSee('Platform Keuangan Multi-Tenancy Berskala Enterprise');
+        $response->assertSee('Tantangan Bisnis');
+        $response->assertSee('Solusi Kami');
+        $response->assertSee('Teknologi Digunakan');
+        $response->assertSee('Proyek Selanjutnya');
+    }
+
+    public function test_portofolio_detail_page_returns_404_for_invalid_slug(): void
+    {
+        $response = $this->get('/portofolio/proyek-tidak-ada');
+
+        $response->assertStatus(404);
     }
 
     public function test_harga_page_can_be_rendered(): void

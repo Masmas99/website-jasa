@@ -1,12 +1,14 @@
 <?php
 
+use App\Http\Controllers\PortfolioController;
 use App\Livewire\Actions\Logout;
 use Illuminate\Support\Facades\Route;
 
 // Public Agency Pages
 Route::view('/', 'welcome')->name('home');
 Route::view('tentang', 'pages.tentang')->name('tentang');
-Route::view('portofolio', 'pages.portofolio')->name('portofolio');
+Route::get('portofolio', [PortfolioController::class, 'index'])->name('portofolio');
+Route::get('portofolio/{slug}', [PortfolioController::class, 'show'])->name('portofolio.detail');
 Route::view('harga', 'pages.harga')->name('harga');
 Route::view('alur-kerja', 'pages.alur-kerja')->name('alur-kerja');
 Route::view('faq', 'pages.faq')->name('faq');

@@ -95,7 +95,8 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                     </div>
                     <h3 class="text-xl font-bold text-neutral-900 group-hover:text-blue-600 transition-colors">Web Development</h3>
-                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">Website modern, responsif, dan ultra cepat menggunakan Laravel, Livewire, Vue, dan arsitektur Tailwind CSS terbaru.</p>
+                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">Website cepat, modern, dan rapi di semua layar (HP hingga laptop). Mudah ditemukan di Google serta dilengkapi panel
+                    kelola konten yang praktis tanpa ribet.</p>
                 </div>
 
                 <!-- Card 2 -->
@@ -104,7 +105,8 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"/></svg>
                     </div>
                     <h3 class="text-xl font-bold text-neutral-900 group-hover:text-blue-600 transition-colors">UI/UX Design</h3>
-                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">Rancangan antarmuka pengguna interaktif dan berkelas dengan riset pengalaman pengguna berstandar internasional.</p>
+                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">Tampilan visual elegan dan intuitif. Dirancang agar pengunjung nyaman, mudah memahami produk, dan terdorong untuk
+                    langsung bertransaksi.</p>
                 </div>
 
                 <!-- Card 3 -->
@@ -113,7 +115,8 @@
                         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
                     </div>
                     <h3 class="text-xl font-bold text-neutral-900 group-hover:text-blue-600 transition-colors">Mobile Applications</h3>
-                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">Aplikasi native dan cross-platform iOS & Android yang lancar, aman, serta terintegrasi langsung dengan API backend.</p>
+                    <p class="text-neutral-600 text-sm mt-3 leading-relaxed">Aplikasi Android & iOS yang ringan, aman, dan responsif untuk menghubungkan bisnis Anda langsung ke genggaman pelanggan
+                    kapan saja.</p>
                 </div>
             </div>
 
@@ -143,7 +146,7 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             <!-- Project 1 -->
-            <a href="{{ route('portofolio') }}" class="group rounded-3xl border border-neutral-200/90 bg-neutral-50/50 p-6 sm:p-8 hover:bg-white hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all block">
+            <a href="{{ route('portofolio.detail', 'jasa-analytics') }}" class="group rounded-3xl border border-neutral-200/90 bg-neutral-50/50 p-6 sm:p-8 hover:bg-white hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all block">
                 <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-blue-600 via-indigo-600 to-cyan-500 p-8 flex flex-col justify-between text-white shadow-inner">
                     <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold self-start">FinTech SaaS</span>
                     <h4 class="text-2xl font-black">Jasa Analytics Platform</h4>
@@ -160,7 +163,7 @@
             </a>
 
             <!-- Project 2 -->
-            <a href="{{ route('portofolio') }}" class="group rounded-3xl border border-neutral-200/90 bg-neutral-50/50 p-6 sm:p-8 hover:bg-white hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all block">
+            <a href="{{ route('portofolio.detail', 'nordic-supply') }}" class="group rounded-3xl border border-neutral-200/90 bg-neutral-50/50 p-6 sm:p-8 hover:bg-white hover:border-blue-300 hover:shadow-xl hover:shadow-blue-500/5 transition-all block">
                 <div class="aspect-video w-full rounded-2xl bg-gradient-to-tr from-cyan-500 via-blue-500 to-indigo-700 p-8 flex flex-col justify-between text-white shadow-inner">
                     <span class="bg-white/20 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold self-start">E-Commerce</span>
                     <h4 class="text-2xl font-black">Nordic Supply Co.</h4>
